@@ -1,0 +1,33 @@
+
+@use 'sass:math';
+@import 'variables';
+
+.card{
+    display: block;
+    padding: $base-padding;
+    border:$base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
+
+    // in CSS, we can style like this .card .card-title {}, but in SCSS we can have
+    .card-title{
+        font-size: $base-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold; 
+    }
+
+    .card-body{
+        font-size: $base-font-size;
+
+        a{
+            text-decoration: underline;
+        }
+    }
+
+}
+
+//@debug "Hello Ninjas";
+//@debug math.div(10,3);
+//@debug math.floor(2.6);
+//@debug math.max(1px, 20px, 15px, 12px);
+//@debug math.min(0.5px, 2px, 7px, 17px);
